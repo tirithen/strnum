@@ -21,7 +21,7 @@ const consider = {
     //skipLike: /regex/
 };
 
-function toNumber(str, options = {}){
+export default function toNumber(str, options = {}){
     // const options = Object.assign({}, consider);
     // if(opt.leadingZeros === false){
     //     options.leadingZeros = false;
@@ -116,9 +116,8 @@ function trimZeros(numStr){
         numStr = numStr.replace(/0+$/, ""); //remove ending zeros
         if(numStr === ".")  numStr = "0";
         else if(numStr[0] === ".")  numStr = "0"+numStr;
-        else if(numStr[numStr.length-1] === ".")  numStr = numStr.substr(0,numStr.length-1);
+        else if(numStr[numStr.length-1] === ".")  numStr = numStr.substring(0,numStr.length-1);
         return numStr;
     }
     return numStr;
 }
-module.exports = toNumber

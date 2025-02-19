@@ -2,7 +2,8 @@
   "name": "strnum",
   "version": "1.0.5",
   "description": "Parse String to Number based on configuration",
-  "main": "strnum.js",
+  "type": "module",
+  "module": "strnum.js",
   "scripts": {
     "test": "jasmine strnum.test.js"
   },
